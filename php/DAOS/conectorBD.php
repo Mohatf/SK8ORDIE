@@ -8,19 +8,19 @@
 
         if($remota){
 
-            //Conexión AWS
-            $servidor = "bdchaibazahouanimohamed.cshv5hls6pld.eu-west-3.rds.amazonaws.com";
+  
+            $servidor= "localhost:3306";
         }else{
 
-            //Local
-            $servidor= "localhost:3306";
+          echo('error en la base de datos');
+            
         }
 
         //Valor del usuario
-        $usuario = "Mohatf";
+        $usuario = "root";
 
         //Contraseña del usuario
-        $password = "634073855Tqm";
+        $password = "root";
 
         //Esquema de Base de datos
         $BD= "TiendaSkate";

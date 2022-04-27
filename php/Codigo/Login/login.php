@@ -56,7 +56,7 @@
                 }?>
                 <?php
                     if(isset($_GET['accion']) && $_GET['accion'] == "emailEnviado"){ 
-                    echo "<script>swal('SK8 OR DIE', 'Se ha enviado un email a su correo electronico para cambiar la contraseña.', 'info');</script>";
+                    echo "<script>swal('SK8 OR DIE', 'Se ha enviado un email a su correo electrónico para cambiar la contraseña.', 'info');</script>";
                         
                 }?>
                 </form>
