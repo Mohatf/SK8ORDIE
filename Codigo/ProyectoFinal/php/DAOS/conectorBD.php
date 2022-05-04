@@ -17,13 +17,13 @@
         }
 
         //Valor del usuario
-        $usuario = "root";
+        $usuario = "debianDB";
 
         //Contraseña del usuario
-        $password = "root";
+        $password = "debianDB";
 
         //Esquema de Base de datos
-        $BD= "TiendaSkate";
+        $BD= "tiendaskate";
 
         //Realizamos la conexión de la BD con la función mysqli_connect();
 
