@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="../../../imagenes/icono-ventana1.png">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>SK8 OR DIE</title>
 </head>
 <body>
@@ -80,9 +79,6 @@
                             </div> 
                         </div>
                     </div>  
-                    <div class="form-group reCAPTCHA">
-                    <div class="g-recaptcha" data-sitekey="6LdsyhkcAAAAANoM-AGoTcDxuZr1wLCcLJymhJZn" required></div>  
-                    </div>
                     <p class="mensaje-error-campos text-center" id="errorFormulario"> <i class="fas fa-exclamation"></i>&nbsp;&nbsp;Completa todos los campos.</p> 
 
                         <div class="form-group">

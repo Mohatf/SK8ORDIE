@@ -14,7 +14,6 @@ $telefono = $_POST['telefono'];
 $fotoPerfil=addslashes(file_get_contents($_FILES['fotoPerfil']['tmp_name']));
 $password = $_POST['password'];
 $repetirpassword = $_POST['repetirpassword'];
-$captcha = $_POST['g-recaptcha-response'];
 
 
  $conexion=conectar(true);
@@ -26,19 +25,8 @@ $captcha = $_POST['g-recaptcha-response'];
 //hacer la consulta de buscar usuario y posteriormente registrarlo 
 
 
-//Clave secreta que proporciona google para el captcha
 
-$secret = '6LdsyhkcAAAAAKmUi0oUAzWzTngKGrIhdIemMcGF';
 
-if(!$captcha){
-  header ('Location: registro.php?error=captchaNoVerificado');
-}
-
-  //Enviamos la clave secreta a la pagina de captcha para comprobar la clave secreta
-    $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$captcha");
-    $arr=json_decode($response, true);
-
-    if($arr['success']){
 
       
 
@@ -75,10 +63,6 @@ if(mysqli_num_rows($existeUsuario)!=0){
     header ("Location: ../Pagina/home.php?user=$idUsuarios");
   
   }
-
-    }else{
-      header ("Location: registro.php?error=captchaMalVerificado");
-    }
 
  
 

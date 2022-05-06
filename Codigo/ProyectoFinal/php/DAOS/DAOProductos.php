@@ -127,7 +127,7 @@ function sumarCantidadProductosCarrito($conexion,$idCarrito){
 }
 function mostrarProductosCarrito($conexion,$idCarrito){
 
-    $consulta = "SELECT * FROM productosCarrito where idCarrito_TC='$idCarrito'";
+    $consulta = "SELECT * FROM productoscarrito where idCarrito_TC='$idCarrito'";
     $resultado = mysqli_query($conexion, $consulta);
     return $resultado;
 }
