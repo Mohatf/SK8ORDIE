@@ -7,8 +7,6 @@ require '../../DAOS/DAOUsuario.php';
 $usuario = $_POST['usuario'];
 $password = $_POST['password'];
 
-  //Nos conectamos a la BD de AWS
-
   $conexion=conectar(true);
 
   //Iniciamos la sesión

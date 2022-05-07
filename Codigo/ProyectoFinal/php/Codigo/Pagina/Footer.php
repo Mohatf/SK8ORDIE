@@ -10,8 +10,8 @@
       <h5 class="text-uppercase mb-0">Conócenos</h5>
 
     <p>
-      El objetivo de Million Bits es proporcionar a los amantes de los videojuegos
-      disfrutar de sus titulos favoritos con una calidad excelente. 
+      El objetivo de SK8 OR DIE es proporcionar a los amantes del skateboarding
+      disfrutar de su deporte favorito con una calidad excelente. 
     </p>
     <p>
     <a class="mapaDelSitio"href="mapaDelSitio.html">Mapa del sitio</a>
