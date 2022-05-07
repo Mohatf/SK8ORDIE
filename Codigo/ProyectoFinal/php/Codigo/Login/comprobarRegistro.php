@@ -7,15 +7,23 @@ $conexion=conectar(true);
 session_start();
 
 echo $usuario = $_POST['usuario'];
+echo "<br>";
 echo $nombre = $_POST['nombre'];
+echo "<br>";
 echo $primerapellido  = $_POST['primerapellido'];
+echo "<br>";
 echo $segundoapellido = $_POST['segundoapellido'];
+echo "<br>";
 echo $dni = $_POST['dni'];
+echo "<br>";
 echo $email = $_POST['email'];
+echo "<br>";
 $telefono = $_POST['telefono'];
+echo "<br>";
 // $fotoPerfil=addslashes(file_get_contents($_FILES['fotoPerfil']['tmp_name']));
 echo $password = $_POST['password'];
-echo $repetirpassword = $_POST['repetirpassword'];
+echo "<br>";
+
 
 
 
