@@ -85,12 +85,12 @@ function mostrarPassword(){
     if(cambio.type == "password"){
         cambio.type = "text";
         // SELECCIONAMOS ESE ICONO Y LO CAMBIAMOS 
-        $('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
+        $('.icon1').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
     }else{
         // EN CASO CONTRARIO QUE EL TIPO PASE A PASSWORD
         cambio.type = "password";
          // SELECCIONAMOS ESE ICONO Y LO CAMBIAMOS 
-            $('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
+            $('.icon1').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
         }
     } 
 
