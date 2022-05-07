@@ -155,7 +155,7 @@ session_start();
           <!--Grid column-->
           <!--Grid column-->
           <div class="col-lg-8 col-md-12 mb-4 mb-md-0">
-            <img class="logo" src="../../../imagenes/menu-icon.png" width='200' height='200' alt="">
+            <img class="logo" src="../../../imagenes/skateordielogo3.png" width='200' height='200' alt="">
           </div>
           <!--Grid column-->
 
