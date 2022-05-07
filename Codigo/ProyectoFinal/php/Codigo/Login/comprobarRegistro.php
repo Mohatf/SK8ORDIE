@@ -13,13 +13,13 @@ $segundoapellido = $_POST['segundoapellido'];
 $dni = $_POST['dni'];
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
-
+$fotoPerfil=$_FILES["fotoPerfil"];
 $password = $_POST['password'];
 
-if($_POST['fotoPerfil']==NULL){
-  echo "No hay nada";
-}else{
+if($_FILES['fotoPerfil']['name']  != null){
   echo "Hay Algo";
+}else{
+  echo "No hay nada";
 }
 
 
