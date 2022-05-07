@@ -6,23 +6,15 @@ require '../../DAOS/DAOUsuario.php';
 $conexion=conectar(true);
 session_start();
 
-echo $usuario = $_POST['usuario'];
-echo "<br>";
-echo $nombre = $_POST['nombre'];
-echo "<br>";
-echo $primerapellido  = $_POST['primerapellido'];
-echo "<br>";
-echo $segundoapellido = $_POST['segundoapellido'];
-echo "<br>";
-echo $dni = $_POST['dni'];
-echo "<br>";
-echo $email = $_POST['email'];
-echo "<br>";
-echo $telefono = $_POST['telefono'];
-echo "<br>";
-// $fotoPerfil=addslashes(file_get_contents($_FILES['fotoPerfil']['tmp_name']));
-echo $password = $_POST['password'];
-echo "<br>";
+$usuario = $_POST['usuario'];
+$nombre = $_POST['nombre'];
+$primerapellido  = $_POST['primerapellido'];
+$segundoapellido = $_POST['segundoapellido'];
+$dni = $_POST['dni'];
+$email = $_POST['email'];
+$telefono = $_POST['telefono'];
+$fotoPerfil=addslashes(file_get_contents($_FILES['fotoPerfil']['tmp_name']));
+$password = $_POST['password'];
 
 
 
