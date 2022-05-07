@@ -16,7 +16,7 @@ $telefono = $_POST['telefono'];
 
 $password = $_POST['password'];
 
-if($fotoPerfil=addslashes(file_get_contents($_FILES['fotoPerfil']['tmp_name']))==NULL){
+if($_POST['fotoPerfil']==NULL){
   echo "No hay nada";
 }else{
   echo "Hay Algo";
