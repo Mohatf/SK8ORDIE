@@ -70,6 +70,8 @@
                             <input class="form-control" type="text" placeholder="Email" name="email" id="email">
                             <p class="mensaje-error" id="errorEmail"> <i class="fas fa-exclamation-circle"></i> El email no cumple el formato.</p>
                         </div> 
+                        
+                        //! ESTA MEDIO PUTO ESTE WEE
                         <div class="col-md-12 form-group">
                             <div class="input-group mb-3">
                                 <div class="custom-file">
