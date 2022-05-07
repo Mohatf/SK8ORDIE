@@ -16,10 +16,10 @@ $telefono = $_POST['telefono'];
 $fotoPerfil=$_POST['fotoPerfil'];
 $password = $_POST['password'];
 
-if($fotoPerfil){
-  echo "Hay Algo";
-}else{
+if($fotoPerfil==NULL){
   echo "No hay nada";
+}else{
+  echo "Hay Algo";
 }
 
 
