@@ -30,7 +30,7 @@
                     <div class="input-group">
                     <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña" required><br>
                         <div class="input-group-append">
-                            <button id="show_password" class="btn btn-outline-light" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon1"></span> </button>
+                            <button id="show_password" class="btn btn-outline-light" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
                         </div>
                     </div><br>
                     <p class="mensaje-error" id="errorPassword">&nbsp;<i class="fas fa-exclamation-circle"></i> La contraseña introducida no cumple los requisitos</p>
