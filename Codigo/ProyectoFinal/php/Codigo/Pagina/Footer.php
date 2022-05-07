@@ -10,7 +10,7 @@
       <h5 class="text-uppercase mb-0">Conócenos</h5>
 
     <p>
-      El objetivo de SK8 OR DIE es proporcionar a los amantes del skateboarding
+      El objetivo de SK8ORDIE es proporcionar a los amantes del skateboarding
       disfrutar de su deporte favorito con una calidad excelente. 
     </p>
     <p>
