@@ -13,7 +13,7 @@ $segundoapellido = $_POST['segundoapellido'];
 $dni = $_POST['dni'];
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
-$fotoPerfil=addslashes(file_get_contents($_FILES['fotoPerfil']['tmp_name']));
+$fotoPerfil=$_POST['fotoPerfil'];
 $password = $_POST['password'];
 
 
