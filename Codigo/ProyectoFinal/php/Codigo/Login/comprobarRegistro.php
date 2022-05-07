@@ -18,7 +18,7 @@ echo $dni = $_POST['dni'];
 echo "<br>";
 echo $email = $_POST['email'];
 echo "<br>";
-$telefono = $_POST['telefono'];
+echo $telefono = $_POST['telefono'];
 echo "<br>";
 // $fotoPerfil=addslashes(file_get_contents($_FILES['fotoPerfil']['tmp_name']));
 echo $password = $_POST['password'];
