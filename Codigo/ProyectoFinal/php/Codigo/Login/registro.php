@@ -74,7 +74,7 @@
                             <div class="input-group mb-3">
                                 <div class="custom-file">
                                     <input type="file"  class="custom-file-input" placeholder="Foto Perfil" name="fotoPerfil" id="fotoPerfil">
-                                  <label class="custom-file-label" for="fotoperfil" aria-describedby="inputGroupFileAddon02">Selecciona una foto de perfil.</label>
+                                  <label class="custom-file-label" for="fotoPerfil">Selecciona una foto de perfil.</label>
                                 </div>
                             </div> 
                         </div>
