@@ -138,7 +138,7 @@ session_start();
       <div class="container p-4">
         <!--Grid row-->
       
-        <div class="row">
+        <div class="row text-light">
             <!--Grid column-->
             <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase mb-0">Conócenos</h5>
