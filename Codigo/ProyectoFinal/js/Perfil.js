@@ -505,7 +505,59 @@ $(document).ready(function(){
         })
     
     }
-  
+
+    $('.boton-darseDeBaja').click(function(){
+        mostrarAlertDeleteMe();
+    });
+
+           //Esta funcion sirve para editar el nombre de dni mediante ajax
+           function mostrarAlertDeleteMe(){
+            swal("Editar Rol", {
+                // ESPECIFICAMOS QUE CONTENIDO QUEREMOS QUE TENGA
+                content: {
+                    element: "input",
+                    attributes: {
+                    name: "rolModificar",
+                    placeholder: "El rol solo puede ser Usuario o Admin",
+                    
+                  
+                        
+                    
+                    },
+                },
+                //BOTONES
+                buttons: {
+                    catch: {
+                        text: "Confirmar",
+                        value: "aceptar",
+                        },
+                    cancel: "Cancelar",
+                
+                },
+    
+            })
+            .then((value) => {
+                switch (value) {
+                    // SI RECIBE EL VALOR aceptar QUE EJECUTE LA SIGUIENTE FUNCION POST  
+                case "aceptar":
+                    $.post('EditarROLAdmin.php', {'rol':`${$('input[name=rolModificar]').val()}`, 'idUsuario':`${id}`}, function(response){
+                        mostrarROL();
+                       
+                        if(response=="rolIncorrecto"){
+                            swal("SK8 OR DIE", "El rol solo puede ser Usuario o Admin", "error");
+                        }else if(response=="Campo nulo"){
+                            swal("SK8 OR DIE", "Escribe un Rol.", "error");
+                        }else{
+                            swal("SK8 OR DIE", "¡El rol se ha actualizado correctamente!", "success");
+                        }
+                    });
+                    
+                    break;
+            
+                    
+                }
+            });
+        }
   
 
 
