@@ -515,7 +515,8 @@ $(document).ready(function(){
             switch (value) {
                 // SI RECIBE EL VALOR aceptar QUE EJECUTE LA SIGUIENTE FUNCION POST  
             case "Si":
-                window.location.href("DarseDeBaja.php"+id);
+                alert("Hola");
+                // window.location.href("DarseDeBaja.php"+id);
                 
                 break;
         
