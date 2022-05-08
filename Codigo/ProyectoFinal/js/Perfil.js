@@ -509,12 +509,19 @@ $(document).ready(function(){
     $('.boton-darseDeBaja').click(function(){
         let id =$(this).attr('data-darseDeBaja');
         swal("¿Seguro que quieres darte de baja?", {
-            buttons: ["No", "Si"],
+            buttons: {
+                catch: {
+                    text: "Confirmar",
+                    value: "aceptar",
+                    },
+                cancel: "Cancelar",
+            
+            },
           })
           .then((value) => {
             switch (value) {
                 // SI RECIBE EL VALOR aceptar QUE EJECUTE LA SIGUIENTE FUNCION POST  
-            case "Si":
+            case "Confirmar":
                 alert("Hola");
                 // window.location.href("DarseDeBaja.php"+id);
                 
