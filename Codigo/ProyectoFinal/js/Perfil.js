@@ -507,9 +507,30 @@ $(document).ready(function(){
     }
 
     $('.boton-darseDeBaja').click(function(){
-        swal("Are you sure you want to do this?", {
-            buttons: ["yes!", true],
-          });
+        swal("¿Seguro que quieres darte de baja?", {
+            buttons: ["No", "Si"],
+          })
+          .then((value) => {
+            switch (value) {
+                // SI RECIBE EL VALOR aceptar QUE EJECUTE LA SIGUIENTE FUNCION POST  
+            case "Si":
+                $.post('EditarROLAdmin.php', {'rol':`${$('input[name=rolModificar]').val()}`, 'idUsuario':`${id}`}, function(response){
+                    mostrarROL();
+                   
+                    if(response=="rolIncorrecto"){
+                        swal("SK8 OR DIE", "El rol solo puede ser Usuario o Admin", "error");
+                    }else if(response=="Campo nulo"){
+                        swal("SK8 OR DIE", "Escribe un Rol.", "error");
+                    }else{
+                        swal("SK8 OR DIE", "¡El rol se ha actualizado correctamente!", "success");
+                    }
+                });
+                
+                break;
+        
+                
+            }
+        });
     });
 
         

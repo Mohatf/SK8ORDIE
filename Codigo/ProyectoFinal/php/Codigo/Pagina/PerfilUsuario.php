@@ -58,7 +58,7 @@ $usuario= mysqli_fetch_assoc($buscarUsuario);
                     <li><i class="icono fas fa-phone-alt"></i>Telefono: <span  id="telefonoAj" ></span> <a href="#" data-telefono="<?php echo $usuario['Telefono'];?>" class="boton-editarTelefono"><i class="fas fa-edit"></i></a></li>
                     <li><i class="icono fas fa-envelope"></i>Email: <span  id="emailAj" ></span><a href="#" data-Email="<?php echo $usuario['Email'];?>" class="boton-editarEmail"><i class="fas fa-edit"></i></a></li>
                     <li><i class="icono fas fa-id-card"></i>DNI: <span  id="dniAj" ></span> <a href="#" data-dni="<?php echo $usuario['Dni'];?>" class="boton-editarDni"><i class="fas fa-edit"></i></a></li>
-                    <li><i class="icono fas fa-user-minus"></i><span  id="bajaAj" ></span> <a href="#" data-darseDeBaja="<?php echo $usuario['Usuario'];?>" class="boton-darseDeBaja"><i class="fas fa-edit"></i></a></li>
+                    <li><i class="icono fas fa-user-minus"></i>Darse de baja<span  id="bajaAj" ></span> <a href="#" data-darseDeBaja="<?php echo $usuario['Usuario'];?>" class="boton-darseDeBaja"><i class="fas fa-edit"></i></a></li>
                 </ul>
             </div>
            
