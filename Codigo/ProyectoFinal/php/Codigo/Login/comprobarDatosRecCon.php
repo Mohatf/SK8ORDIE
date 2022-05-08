@@ -30,11 +30,11 @@ if(mysqli_num_rows($validarUsuario)==0){
     header ('Location: recuperarContraseña.php?error=dniIncorrecto');
 }else{
     // SI EXISTEN SE ENVIA EL EMAIL
-    $NomUsuario =$_POST['usuario'];
+    $nomUsuario =$_POST['usuario'];
     $name = "SK8 OR DIE";
     $subject = "Recuperar contraseña SK8 OR DIE";
     $texto= "aquí";
-    $url="http://192.168.1.174/SK8ORDIE/Codigo/ProyectoFinal/php/Codigo/Login/nuevaPassword.php?user=$NomUsuario";
+    $url="http://192.168.1.174/SK8ORDIE/Codigo/ProyectoFinal/php/Codigo/Login/nuevaPassword.php?user=$nomUsuario";
     $body ="Pulsa "."<a href='$url'>$texto</a>"." para cambiar tu contraseña.";
 
     require_once "PHPMailer/PHPMailer.php";

@@ -1,6 +1,6 @@
 <?php
 require '../../DAOS/Config.php';
-$usuario= openssl_decrypt($_GET['user'],COD, KEY);
+$usuario= $_GET['user'];
 
 
 ?>
@@ -28,23 +28,23 @@ $usuario= openssl_decrypt($_GET['user'],COD, KEY);
             <form action="updatePassword.php" class="col-md-3" method="POST" id="formularioUpdatePassword">
                 <legend class="tituloLogin text-center">Nueva contraseña</legend>
                 <div class="grupo_password ">
-                            <div class="input-group">
-                            <input type="password" name="password" id="password" class="form-control" placeholder="Nueva contraseña" required><br>
-                                <div class="input-group-append">
-                                    <button id="show_password" class="btn btn-outline-light" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
-                                </div>
-                            </div><br>
-                            <p class="mensaje-error" id="errorPassword">&nbsp;<i class="fas fa-exclamation-circle"></i> La contraseña introducida no cumple los requisitos</p>
+                    <div class="input-group">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Nueva contraseña" required><br>
+                        <div class="input-group-append">
+                            <button id="show_password" class="btn btn-outline-light" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
+                        </div>
+                    </div><br>
+                    <p class="mensaje-error" id="errorPassword">&nbsp;<i class="fas fa-exclamation-circle"></i> La contraseña introducida no cumple los requisitos</p>
                 </div>     
                
                 <div class="grupo_RepetirPassword ">
-                            <div class="input-group">
-                            <input type="password" name="repetirPassword" id="repetirPassword" class="form-control" placeholder="Repetir contraseña" required ><br>
-                                <div class="input-group-append">
-                                    <button id="show_repetirPassword" class="btn btn-outline-light" type="button" onclick="mostrarRepetirPassword()"> <span class="fa fa-eye-slash iconR"></span> </button>
-                                </div>
-                            </div><br>
-                            <p class="mensaje-error" id="errorRepetirPassword"> <i class="fas fa-exclamation-circle"></i> Las contraseñas no coinciden.</p>
+                    <div class="input-group">
+                    <input type="password" name="repetirPassword" id="repetirPassword" class="form-control" placeholder="Repetir contraseña" required ><br>
+                        <div class="input-group-append">
+                            <button id="show_repetirPassword" class="btn btn-outline-light" type="button" onclick="mostrarRepetirPassword()"> <span class="fa fa-eye-slash iconR"></span> </button>
+                        </div>
+                    </div><br>
+                    <p class="mensaje-error" id="errorRepetirPassword"> <i class="fas fa-exclamation-circle"></i> Las contraseñas no coinciden.</p>
                 </div>
                 <input type="hidden" name="usuario" value="<?php echo $usuario; ?>">
                 <p class="mensaje-error-campos text-center" id="errorFormulario"> <i class="fas fa-exclamation"></i>&nbsp;&nbsp;Completa todos los campos.</p> 

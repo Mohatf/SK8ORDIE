@@ -5,8 +5,9 @@ require '../../DAOS/DAOUsuario.php';
 require '../../DAOS/Config.php';
 $conexion=conectar(true);
 
-$usuario= $_GET['usuario'];
+$usuario= $_post['usuario'];
 $password= $_POST['password'];
+echo $usuario;
 
 // $validarUsuario= validarUsuario($conexion, $usuario);
 
