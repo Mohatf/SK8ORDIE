@@ -507,6 +507,7 @@ $(document).ready(function(){
     }
 
     $('.boton-darseDeBaja').click(function(){
+        let id =$(this).attr('data-darseDeBaja');
         swal("¿Seguro que quieres darte de baja?", {
             buttons: ["No", "Si"],
           })
@@ -514,17 +515,7 @@ $(document).ready(function(){
             switch (value) {
                 // SI RECIBE EL VALOR aceptar QUE EJECUTE LA SIGUIENTE FUNCION POST  
             case "Si":
-                $.post('EditarROLAdmin.php', {'rol':`${$('input[name=rolModificar]').val()}`, 'idUsuario':`${id}`}, function(response){
-                    mostrarROL();
-                   
-                    if(response=="rolIncorrecto"){
-                        swal("SK8 OR DIE", "El rol solo puede ser Usuario o Admin", "error");
-                    }else if(response=="Campo nulo"){
-                        swal("SK8 OR DIE", "Escribe un Rol.", "error");
-                    }else{
-                        swal("SK8 OR DIE", "¡El rol se ha actualizado correctamente!", "success");
-                    }
-                });
+                window.location.href("DarseDeBaja.php"+id);
                 
                 break;
         
