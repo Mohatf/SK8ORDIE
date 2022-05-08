@@ -9,8 +9,8 @@ $password= $_POST['password'];
 
 
 $validarUsuario= validarUsuario($conexion, $usuario);
-
 echo "HOLA";
+var_dump($validarUsuario);
 
 // if(mysqli_num_rows($validarUsuario)!=0){
 //     // SI EXISTE CAMBIAMOS LA CONTRASEÑA
