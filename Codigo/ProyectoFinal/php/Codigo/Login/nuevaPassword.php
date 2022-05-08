@@ -46,7 +46,7 @@ $usuario= $_GET['user'];
                     </div><br>
                     <p class="mensaje-error" id="errorRepetirPassword"> <i class="fas fa-exclamation-circle"></i> Las contraseñas no coinciden.</p>
                 </div>
-                <input type="text" name="usuario" value="<?php echo $usuario; ?>">
+                <input type="hidden" name="usuario" value="<?php echo $usuario; ?>">
                 <p class="mensaje-error-campos text-center" id="errorFormulario"> <i class="fas fa-exclamation"></i>&nbsp;&nbsp;Completa todos los campos.</p> 
                 <div class="form-group">
                     <input class=" botonEnviar btn btn-outline-success col-md-12" type="submit" value="Enviar">
