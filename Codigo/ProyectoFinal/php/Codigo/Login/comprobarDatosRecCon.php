@@ -34,6 +34,7 @@ if(mysqli_num_rows($validarUsuario)==0){
     $name = "SK8 OR DIE";
     $subject = "Recuperar contraseña SK8 OR DIE";
     $texto= "aquí";
+    //!CAMBIAR IP DESDE EL SERVIDOR EN EL QUE ESTES
     $url="http://192.168.1.174/SK8ORDIE/Codigo/ProyectoFinal/php/Codigo/Login/nuevaPassword.php?user=$nomUsuario";
     $body ="Pulsa "."<a href='$url'>$texto</a>"." para cambiar tu contraseña.";
 
