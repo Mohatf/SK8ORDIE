@@ -7,7 +7,6 @@
 require '../../DAOS/conectorBD.php';
 require '../../DAOS/DAOUsuario.php';
 require '../../DAOS/Config.php';
-//Nos conectamos a la BD de AWS
 
 $conexion=conectar(true);
 
@@ -35,7 +34,7 @@ if(mysqli_num_rows($validarUsuario)==0){
     $name = "SK8 OR DIE";
     $subject = "Recuperar contraseña SK8 OR DIE";
     $texto= "aquí";
-    $url="http://localhost/ProyectoFinal/php/Codigo/Login/nuevaPassword.php?user=$NomUsuario";
+    $url="http://localhost/SK8ORDIE/Codigo/ProyectoFinal/php/Codigo/Login/nuevaPassword.php?user=$NomUsuario";
     $body ="Pulsa "."<a href='$url'>$texto</a>"." para cambiar tu contraseña.";
 
     require_once "PHPMailer/PHPMailer.php";
