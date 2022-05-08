@@ -507,30 +507,9 @@ $(document).ready(function(){
     }
 
     $('.boton-darseDeBaja').click(function(){
-        swal("Editar Rol", {
-            // ESPECIFICAMOS QUE CONTENIDO QUEREMOS QUE TENGA
-            content: {
-                element: "input",
-                attributes: {
-                name: "rolModificar",
-                placeholder: "El rol solo puede ser Usuario o Admin",
-                
-              
-                    
-                
-                },
-            },
-            //BOTONES
-            buttons: {
-                catch: {
-                    text: "Confirmar",
-                    value: "aceptar",
-                    },
-                cancel: "Cancelar",
-            
-            },
-
-        })
+        swal("Are you sure you want to do this?", {
+            buttons: ["yes!", true],
+          });
     });
 
         
