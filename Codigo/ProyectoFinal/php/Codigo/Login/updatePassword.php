@@ -1,8 +1,4 @@
 <?php
-if(!isset($_SERVER['HTTP_REFERER'])){
-    header("Location: home.php");
-    exit;
-}
 
 require '../../DAOS/conectorBD.php';
 require '../../DAOS/DAOUsuario.php';
