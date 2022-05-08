@@ -58,7 +58,7 @@ $usuario= mysqli_fetch_assoc($buscarUsuario);
                     <li><i class="icono fas fa-phone-alt"></i>Telefono: <span  id="telefonoAj" ></span> <a href="#" data-telefono="<?php echo $usuario['Telefono'];?>" class="boton-editarTelefono"><i class="fas fa-edit"></i></a></li>
                     <li><i class="icono fas fa-envelope"></i>Email: <span  id="emailAj" ></span><a href="#" data-Email="<?php echo $usuario['Email'];?>" class="boton-editarEmail"><i class="fas fa-edit"></i></a></li>
                     <li><i class="icono fas fa-id-card"></i>DNI: <span  id="dniAj" ></span> <a href="#" data-dni="<?php echo $usuario['Dni'];?>" class="boton-editarDni"><i class="fas fa-edit"></i></a></li>
-                    <li><i class="icono fas fa-user-minus"></i><a href="#">Darse de baja</li>
+                    <li><i class="icono fas fa-user-minus"></i><a href="#" onclick="confirmacionDelete">Darse de baja</li>
                 </ul>
             </div>
            
@@ -71,6 +71,13 @@ $usuario= mysqli_fetch_assoc($buscarUsuario);
     <script src="../../../js/menu.js"></script>
     <script src="../../../js/Perfil.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script>
+        function confirmacionDelete(){
+            swal("¿Estás seguro de que quieres darte de baja?", {
+            buttons: ["No", "Si"],
+            });
+        }
+    </script>
 </body>
 
 </html>
