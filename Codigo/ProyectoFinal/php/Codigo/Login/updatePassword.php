@@ -2,10 +2,9 @@
 
 require '../../DAOS/conectorBD.php';
 require '../../DAOS/DAOUsuario.php';
-require '../../DAOS/Config.php';
 $conexion=conectar(true);
 
-$usuario= $_post['usuario'];
+$usuario= $_POST['usuario'];
 $password= $_POST['password'];
 echo $usuario;
 
