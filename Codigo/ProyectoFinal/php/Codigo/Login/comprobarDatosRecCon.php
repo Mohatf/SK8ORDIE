@@ -30,7 +30,7 @@ if(mysqli_num_rows($validarUsuario)==0){
     header ('Location: recuperarContraseña.php?error=dniIncorrecto');
 }else{
     // SI EXISTEN SE ENVIA EL EMAIL
-    $NomUsuario = openssl_encrypt($_POST['usuario'],COD,KEY);
+    $NomUsuario =$_POST['usuario'];
     $name = "SK8 OR DIE";
     $subject = "Recuperar contraseña SK8 OR DIE";
     $texto= "aquí";
