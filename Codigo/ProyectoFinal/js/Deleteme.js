@@ -12,17 +12,11 @@ function validarDeleteME(){
     
     if(deleteme.value=='DeleteMe'){
         
-        deleteme.className = "form-control is-valid";
-        errorDeleteme.classList.remove('mensaje-errorActivo');
-        errorDeleteme.classList.add('mensaje-error');
-         
+        deleteme.className = "form-control is-valid"; 
         return true;
     }else{
         
        deleteme.className = "form-control is-invalid";
-       errorDeleteme.classList.remove('mensaje-error');
-       errorDeleteme.classList.add('mensaje-errorActivo');7
-
         return false; 
     }
 }

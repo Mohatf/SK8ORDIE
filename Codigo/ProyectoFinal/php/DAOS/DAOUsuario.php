@@ -38,6 +38,15 @@ function buscarUsuarioID($conexion, $idUsuario){
     return $resultado;
 }
 
+function darseDeBaja($conexion, $idUsuario){
+
+    $consulta = "DELETE FROM usuarios where idUsuarios = '$idUsuario'";
+
+    $resultado = mysqli_query($conexion, $consulta);
+    return $resultado;
+}
+
+
 // Para validar individualmente Email y dni para determinar que el error es porque alguno de esos campos ya existen 
 //******************************* */
 function comprobarDni($conexion, $dni){

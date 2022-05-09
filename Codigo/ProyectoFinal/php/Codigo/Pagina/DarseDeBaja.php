@@ -14,10 +14,10 @@
     //RECOGEMOS  LOS DATOS PROCEDENTES DEL PHP
     $idUsuario= $_SESSION['idUsuarios']; 
     // REALIZAMOS LA CONSULTA PARA ELIMINAR AL USUARIO
-    // $darseDeBaja=darseDeBaja($conexion, $idUsuario);
+    $darseDeBaja=darseDeBaja($conexion, $idUsuario);
     // Y DESTRUIMOS LA SESION
     session_destroy();
     // FINALMENTE LO REEDIRIGIMOS AL HOME
-    // header("Location: home.php");
+    header("Location: home.php");
 
 ?>

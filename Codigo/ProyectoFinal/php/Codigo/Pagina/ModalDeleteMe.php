@@ -14,7 +14,6 @@
                         <div class="form-group">
                         <label for="deleteme">Escriba lo siguiente para confirmar la eliminación: "DeleteMe"(escribalo sin comillas).</label><br>
                         <input type="text" name="deleteme" id="deleteme" placeholder="Escriba aquí..." class="form-control" required><br>
-                        <p class="mensaje-error" id="mensaje-errorDel">La palabra es incorrecta.</p>
                         </div>
                         
                     </div>
