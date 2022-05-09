@@ -31,6 +31,7 @@ $usuario= mysqli_fetch_assoc($buscarUsuario);
 
 <body style="background:#23252B ;">
     <?php include 'menu.php'; ?>
+    <?php include 'ModalDeleteMe.php'; ?>
   
     <div class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
