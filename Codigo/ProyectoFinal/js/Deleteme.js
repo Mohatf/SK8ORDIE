@@ -1,6 +1,6 @@
 let deleteme = document.getElementById('deleteme');
 // Y AQUI GUARDAMOS EL MENSAJE DE ERROR
-const errorDeleteme= document.getElementById('mensaje-error');
+const errorDeleteme= document.getElementById('mensaje-errorDel');
 // GUARDAMOS EL FORMULARIO EN LA SIGUIENTE VARIABLE
 let formularioDeleteMe = document.getElementById('FormularioDarseDeBaja');
 
