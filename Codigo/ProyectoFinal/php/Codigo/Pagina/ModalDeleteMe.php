@@ -8,13 +8,13 @@
                 </button>
             </div>
             
-            <form action="DarseDeBaja.php" id="FormularioDarseDeBaja" method="post" enctype="multipart/form-data">      
+            <form action="DarseDeBaja.php?idUsuario=<?php echo openssl_encrypt($_SESSION['idUsuario'], COD, KEY)?>" id="FormularioDarseDeBaja" method="post" enctype="multipart/form-data">      
                     <!-- imagen -->
                     <div class="form-group grupo_ col-md-12 " >
                         <div class="form-group">
                         <label for="fotoPerfil">Escriba lo siguiente para confirmar la eliminación: "DeleteMe"(escribalo sin comillas).</label><br>
                         <input type="text" name="deleteme" id="deleteme" placeholder="Escriba aquí..." class="form-control" required><br>
-                        <p class="mensajeError-oculto" id="mensaje-error">La palabra es incorrecta.</p>
+                        <p class="mensaje-error" id="mensaje-error">La palabra es incorrecta.</p>
                         </div>
                         
                     </div>
