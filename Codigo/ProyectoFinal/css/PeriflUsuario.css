@@ -442,3 +442,19 @@ header.sticky .menu-item .sub-menu{
 
 
 }
+
+.mensaje-error{
+    margin-top:1vh ;
+    font-family: 'Rubik', sans-serif;
+    color: red;
+    font-size: 1.4vh;
+    display: none;
+  }
+
+  .mensaje-errorActivo{
+    margin-top: 1vh;
+    font-family: 'Rubik', sans-serif;
+    color: red;
+    font-size: 1.7vh;
+    display: block;
+  }
