@@ -2,6 +2,7 @@
 
 require '../../DAOS/conectorBD.php';
 require '../../DAOS/DAOUsuario.php';
+require '../../DAOS/Config.php';
 
 $conexion = conectar(true);
 
@@ -58,7 +59,7 @@ $usuario= mysqli_fetch_assoc($buscarUsuario);
                     <li><i class="icono fas fa-phone-alt"></i>Telefono: <span  id="telefonoAj" ></span> <a href="#" data-telefono="<?php echo $usuario['Telefono'];?>" class="boton-editarTelefono"><i class="fas fa-edit"></i></a></li>
                     <li><i class="icono fas fa-envelope"></i>Email: <span  id="emailAj" ></span><a href="#" data-Email="<?php echo $usuario['Email'];?>" class="boton-editarEmail"><i class="fas fa-edit"></i></a></li>
                     <li><i class="icono fas fa-id-card"></i>DNI: <span  id="dniAj" ></span> <a href="#" data-dni="<?php echo $usuario['Dni'];?>" class="boton-editarDni"><i class="fas fa-edit"></i></a></li>
-                    <li><i class="icono fas fa-user-minus"></i>Darse de baja <span  id="bajaAj" ></span> <a href="#" data-darseDeBaja="<?php echo $usuario['idUsuarios'];?>" class="boton-darseDeBaja"><i class="fas fa-edit"></i></a></li>
+                    <li><i class="icono fas fa-user-minus"></i>Darse de baja</li>
                 </ul>
             </div>
            
@@ -70,6 +71,7 @@ $usuario= mysqli_fetch_assoc($buscarUsuario);
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../../../js/menu.js"></script>
     <script src="../../../js/Perfil.js"></script>
+    <script src="../../../js/Deleteme.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
   
 </body>
