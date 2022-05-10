@@ -9,18 +9,18 @@ $precioProducto=$_POST['precioProducto'];
 $descripcionProducto=$_POST['descripcionProducto'];
 $stockProducto=$_POST['stockProducto'];
 $idCategoriaProducto=$_POST['categoriaProducto'];
-$imagenProducto = $_FILES['imagenProducto'] ;
+$imagenProducto = $_FILES["imagenProducto"] ;
 $buscarCategoria=filtrarCategoria($conexion, $idCategoriaProducto);
 $categorias=mysqli_fetch_assoc($buscarCategoria);
 $categoriaProducto=$categorias['NombreCategoria'];
 $idCategoria=$categorias['idCategoria'];
 
 
-if($imagenProducto==NULL){
+if($_FILES['imagenProducto']['name']  != null){
     editarProductoSinImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$idProducto);
 
 }else{
-    editarProductoConImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$imagenProductO=addslashes(file_get_contents($_FILES['imagenProducto']['tmp_name'])),$idProducto);
+    editarProductoConImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,addslashes(file_get_contents($_FILES['imagenProducto']['tmp_name'])),$idProducto);
 }
 
 header('Location: EditarProductoAdmin.php?idProducto='.$idProducto);
