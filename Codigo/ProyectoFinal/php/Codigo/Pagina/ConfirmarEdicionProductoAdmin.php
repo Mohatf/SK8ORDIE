@@ -21,7 +21,7 @@ if($_FILES['imagenProducto']['name']  != null){
 
 }else{
     $img=curl_get_contents($_FILES['imagenProducto']['tmp_name']);
-    editarProductoConImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$imagenProducto,$idProducto);
+
 }
 
 header('Location: EditarProductoAdmin.php?idProducto='.$idProducto);
