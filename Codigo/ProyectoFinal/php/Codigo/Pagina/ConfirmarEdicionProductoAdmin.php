@@ -17,10 +17,10 @@ $idCategoria=$categorias['idCategoria'];
 
 
 if($_FILES['imagenProducto']['name']  != null){
-    editarProductoSinImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$idProducto);
-
+    editarProductoConImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,addslashes(file_get_contents($_FILES['imagenProducto']['tmp_name'])),$idProducto);
+    
 }else{
-    $img=curl_get_contents($imagenProducto);
+    editarProductoSinImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$idProducto);
 
 }
 
