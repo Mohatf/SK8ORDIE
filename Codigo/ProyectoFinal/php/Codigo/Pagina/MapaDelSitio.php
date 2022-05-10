@@ -31,7 +31,7 @@ session_start();
                 <h1 class="titleAdminUser">MAPA DEL SITIO SK8 OR DIE <i class="fa-solid fa-sitemap"></i></h1>
             </div>
             <div class="row">
-                <ul style="columns: 2;-webkit-columns: 2; -moz-columns: 2;">
+                <ul>
                     
                     <li> <a href="home.php">Inicio</a> </li>
                     <li> <a href="CatalogoSkateBoardsCompleto.php">Skateboards Completos</a> </li>
