@@ -45,7 +45,14 @@ session_start();
                     <li> <a href="CatalogoWaveboards.php">Waveboards</a> </li>
                     <li> <a href="CatalogoAccesorios.php">Accesorios</a> </li>
                     <li> <a href="SobreNosotros.php">Sobre Nosotros</a> </li>
-                 
+                    <?php if($_SESSION['usuarioConectado']==true){ ?>
+                        <li> <a href="PerfilUsuario.php">Perfil</a> </li>
+                        <li> <a href="Carrito.php">Carrito</a> </li>
+                    <?php } ?>
+                    <?php if($_SESSION['usuarioConectado']==false){ ?>
+                    <li> <a href="../Login/login.php">Login</a> </li>
+                    <li> <a href="../Login/registro.php">Registro</a> </li>
+                    <?php } ?>
                         
                 </ul> 
         </div>
