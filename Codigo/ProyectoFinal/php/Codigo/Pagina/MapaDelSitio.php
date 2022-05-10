@@ -40,8 +40,30 @@ $usuarioDireccion= mysqli_fetch_assoc($buscarUsuarioDireccion);
                 <h1 class="titleAdminUser">MAPA DEL SITIO SK8 OR DIE <i class="fa-solid fa-sitemap"></i></h1>
             </div>
             <div class="row">
-            <?php if($_SESSION['usuarioConectado']==false){?>  
-               
+                <ul>
+                    
+                    <li> <a href="home.php">Inicio</a> </li>
+                    <li> <a href="CatalogoSkateBoardsCompleto.php">Skateboards Completos</a> </li>
+                    <li> <a href="CatalogoSkateBoardsTablas.php">Skateboards Tablas</a> </li>
+                    <li> <a href="CatalogoSkateBoardsEjes.php">Skateboards Ejes</a> </li>
+                    <li> <a href="CatalogoSkateBoardsRuedas.php">Skateboards Ruedas</a> </li>
+                    <li> <a href="CatalogoLongBoardsCompletos.php">Longboards Completos</a> </li>
+                    <li> <a href="CatalogoLongBoardsTablas.php">Longboards Tablas</a> </li>
+                    <li> <a href="CatalogoLongBoardsEjes.php">Longboards Ejes</a> </li>
+                    <li> <a href="CatalogoLongBoardsRuedas.php">Longboards Ruedas</a> </li>
+                    <li> <a href="CatalogoWaveboards.php">Waveboards</a> </li>
+                    <li> <a href="CatalogoAccesorios.php">Accesorios</a> </li>
+                    <li> <a href="SobreNosotros.php">Sobre Nosotros</a> </li>
+                    <?php if($_SESSION['usuarioConectado']==true){?>
+                        <li> <a href="PerfilUsuario.php">Perfil</a> </li>
+                        <li> <a href="Carrito.php">Carrito</a> </li>
+                    <?php}?>
+                    <?php if($_SESSION['usuarioConectado']==false){?>
+                    <li> <a href="../Login/login.php">Login</a> </li>
+                    <li> <a href="../Login/registro.php">Registro</a> </li>
+                    <?php}?>
+                        
+                </ul> 
         </div>
        
     </section>  
