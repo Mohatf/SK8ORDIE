@@ -8,7 +8,7 @@
       <!--Grid column-->
       <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
       <h5 class="text-uppercase mb-0">Conócenos</h5>
-      <hr>
+      <hr style="color:white;">
 
     <p>
       El objetivo de SK8ORDIE es proporcionar a los amantes del skateboarding
