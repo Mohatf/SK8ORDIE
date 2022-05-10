@@ -1,15 +1,6 @@
 <?php 
-
-require '../../DAOS/conectorBD.php';
-
-require '../../DAOS/DAOProductos.php';
-
-require '../../DAOS/DAOUsuario.php';
-$conexion = conectar(true);
 session_start();
 
-$buscarUsuarioDireccion=buscarUsuarioID($conexion, $_SESSION['idUsuarios']);
-$usuarioDireccion= mysqli_fetch_assoc($buscarUsuarioDireccion);
 
 ?>
 
