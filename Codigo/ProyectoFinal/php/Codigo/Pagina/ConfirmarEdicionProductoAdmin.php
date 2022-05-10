@@ -20,7 +20,7 @@ if($_FILES['imagenProducto']['name']  != null){
     editarProductoSinImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$idProducto);
 
 }else{
-    $img=@file_get_contents($_FILES['imagenProducto']['tmp_name']);
+    $img=curl_get_contents($_FILES['imagenProducto']['tmp_name']);
     editarProductoConImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$imagenProducto,$idProducto);
 }
 
