@@ -20,7 +20,8 @@ if($_FILES['imagenProducto']['name']  != null){
     editarProductoSinImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$idProducto);
 
 }else{
-    editarProductoConImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,addslashes(file_get_contents($_FILES['imagenProducto']['tmp_name'])),$idProducto);
+    $img=addslashes(file_get_contents($_FILES['imagenProducto']['tmp_name']));
+    editarProductoConImagen($conexion,$nombreProducto,$precioProducto,$descripcionProducto,$stockProducto,$categoriaProducto,$idCategoria,$imagenProducto,$idProducto);
 }
 
 header('Location: EditarProductoAdmin.php?idProducto='.$idProducto);
