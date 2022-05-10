@@ -9,7 +9,7 @@ $precioProducto=$_POST['precioProducto'];
 $descripcionProducto=$_POST['descripcionProducto'];
 $stockProducto=$_POST['stockProducto'];
 $idCategoriaProducto=$_POST['categoriaProducto'];
-$imagenProducto = addslashes(file_get_contents($_FILES['imagenProducto']['tmp_name']));
+
 $buscarCategoria=filtrarCategoria($conexion, $idCategoriaProducto);
 $categorias=mysqli_fetch_assoc($buscarCategoria);
 $categoriaProducto=$categorias['NombreCategoria'];
