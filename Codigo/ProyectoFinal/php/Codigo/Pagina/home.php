@@ -49,7 +49,7 @@ session_start();
                   while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
                 ?>
                 <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
-                      <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>" width="100%" height="160px">
+                     <a href="MapaDelSitio.php"> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>" width="100%" height="160px"></a>
                     </span>
                 </div>
                 <?php
