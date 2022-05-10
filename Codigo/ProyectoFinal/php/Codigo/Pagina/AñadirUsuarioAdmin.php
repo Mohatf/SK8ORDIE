@@ -13,6 +13,7 @@ $telefono = $_POST['telefono'];
 $password = $_POST['password'];
 $fotoperfil=imagenDefault($conexion);
 $foto=mysqli_fetch_assoc($fotoperfil);
+//! EEEEE
 $imagenDef=$foto['imagenDefault'];
 
 $conexion=conectar(true);
