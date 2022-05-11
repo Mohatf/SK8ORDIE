@@ -46,7 +46,9 @@ session_start();
                 <?php
                   $buscarProductosRandom = buscarProductosRandomEjes($conexion);
                   $i = 0;
+          
                   while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
+                    
                 ?>
                 <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
                      <a href=""> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>" width="100%" height="160px"></a>
@@ -74,12 +76,18 @@ session_start();
               <?php
                 $buscarProductosRandom =  buscarProductosRandom($conexion);
                 $i = 0;
+                $enlace="";
                 while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
+                  if($productosRandom['NombreCategoria']== "Skateboards Completos"){
+                    $enlace="DetallesProductoSkateBoardsCompletos.php?id=".$productosRandom['idProductos'];
+                  }else{
+                    $enlace="www.google.es";
+                  }
               ?>
               <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
                   <span style="font-size:25px; display: flex; justify-content: center; background: #fff; border: none;  color:black"><?php echo $productosRandom['NombreProducto'] ?></span>
                   <span style="display: flex; justify-content: center; background: #fff; border: none;">
-                    <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>">
+                   <a href="<?php $enlace; ?>"> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>"></a>
                   </span>
               </div>
               <?php
