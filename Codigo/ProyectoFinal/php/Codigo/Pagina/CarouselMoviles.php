@@ -11,7 +11,7 @@
         <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
             <span style="font-size:25px; display: flex; justify-content: center; background: #fff; border: none;  color:black"><?php echo $productosRandom['NombreProducto'] ?></span>
             <span style="display: flex; justify-content: center; background: #fff; border: none;">
-            <a href="<?php echo $enlace; ?>"> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?> height='440px'"></a>
+            <a href="<?php echo $enlace; ?>"> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>"></a>
             </span>
         </div>
         <?php
