@@ -48,10 +48,10 @@ session_start();
                   $i = 0;
           
                   while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
-                    
+                    $enlace="DetallesProductoSkateBoardsCompletos.php?id=".$productosRandom['idProductos'];
                 ?>
                 <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
-                     <a href=""> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>" width="100%" height="160px"></a>
+                     <a href="<?php echo $enlace; ?>"> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>" width="100%" height="160px"></a>
                     </span>
                 </div>
                 <?php
@@ -78,11 +78,7 @@ session_start();
                 $i = 0;
                 $enlace="";
                 while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
-                  if($productosRandom['NombreCategoria'] == "Skateboards Completos"){
-                    $enlace="DetallesProductoSkateBoardsCompletos.php?id=".$productosRandom['idProductos'];
-                  }elseif($productosRandom['NombreCategoria'] == "Longboards Completos"){
-                    $enlace="DetallesProductoSkateBoardsCompletos.php?id=".$productosRandom['idProductos'];
-                  }
+                  $enlace="DetallesProductoSkateBoardsCompletos.php?id=".$productosRandom['idProductos'];
               ?>
               <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
                   <span style="font-size:25px; display: flex; justify-content: center; background: #fff; border: none;  color:black"><?php echo $productosRandom['NombreProducto'] ?></span>
@@ -116,9 +112,10 @@ session_start();
                 $buscarProductosRandom = buscarProductosRandomRuedas($conexion);
                 $i = 0;
                 while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
+                  $enlace="DetallesProductoSkateBoardsCompletos.php?id=".$productosRandom['idProductos'];
               ?>
               <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
-                    <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>" width="100%" height="200px">
+                  <a href="<?php echo $enlace; ?>"><img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>" width="100%" height="200px"></a>  
                   </span>
               </div>
               <?php
