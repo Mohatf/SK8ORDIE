@@ -24,27 +24,27 @@ $existeEmail = comprobarEmail($conexion, $email);
 
 
 
-// if(mysqli_num_rows($existeUsuario)!=0){
+if(mysqli_num_rows($existeUsuario)!=0){
  
-// } else if(mysqli_num_rows($existeDni)!=0){
+} else if(mysqli_num_rows($existeDni)!=0){
 
 
-// } else if(mysqli_num_rows($existeEmail)!=0){
+} else if(mysqli_num_rows($existeEmail)!=0){
     
    
-// } else {
+} else {
   
-//   registroSinFoto($conexion, $nombre, $usuario, $password, $primerapellido, $segundoapellido, $dni, $email, $telefono)
+  registroSinFoto($conexion, $nombre, $usuario, $password, $primerapellido, $segundoapellido, $dni, $email, $telefono);
    
-//     $ultimoId = mysqli_insert_id($conexion);
+    $ultimoId = mysqli_insert_id($conexion);
 
-//     $idCarrito = $ultimoId;
-//     $idUsuarios = $ultimoId;
+    $idCarrito = $ultimoId;
+    $idUsuarios = $ultimoId;
     
-//     crearCarrito($conexion, $idCarrito, $idUsuarios);
+    crearCarrito($conexion, $idCarrito, $idUsuarios);
     
   
-//   }
+  }
 
   
 
