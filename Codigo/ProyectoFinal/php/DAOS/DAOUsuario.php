@@ -93,7 +93,7 @@ function validarDni($conexion, $dni, $usuario){
  
 function registro($conexion, $nombre, $usuario, $password, $primerapellido, $segundoapellido, $dni, $email, $telefono, $fotoperfil){
 
-     $consulta = "INSERT INTO `usuarios` (`Nombre`, `Usuario`, `Password`, `PrimerApellido`, `SegundoApellido`, `Dni`, `Email`, `Telefono`, `Rol`, `FotoPerfil`) VALUES ('$nombre', '$usuario', '$password', '$primerapellido', '$segundoapellido', '$dni', '$email', '$telefono', 'Usuario', '$fotoperfil')";
+     $consulta = "INSERT INTO `usuarios` (`Nombre`, `Usuario`, `Password`, `PrimerApellido`, `SegundoApellido`, `Dni`, `Email`, `Telefono`, `Rol`, `FotoPerfil`, `Direccion`,`ComunidadAutonoma`,`Provincia`, `Ciudad`, `CodigoPostal`) VALUES ('$nombre', '$usuario', '$password', '$primerapellido', '$segundoapellido', '$dni', '$email', '$telefono', 'Usuario', '$fotoperfil','','','','','')";
 
 
     $resultado = mysqli_query($conexion, $consulta);
