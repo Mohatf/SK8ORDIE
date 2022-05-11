@@ -2,7 +2,7 @@
     <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <?php
-        $buscarProductosRandom =  buscarProductosRandomMovil($conexion);
+        $buscarProductosRandom =  buscarProductosRandom($conexion);
         $i = 0;
         $enlace="";
         while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
