@@ -120,6 +120,7 @@ section{
     font-size: 40px;
     font-family: 'Roboto', sans-serif;
     margin-top: 100px;
+    text-shadow: 0 0 2px black;
 }
 .btn.btn-addCar{
     font-family: 'Rubik', sans-serif;
