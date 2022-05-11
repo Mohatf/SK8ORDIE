@@ -24,7 +24,7 @@ $(document).ready(function(){
              
                 if(response=='0'){
                     
-                    $('#listaProductos').html('<p class="productoNoEncontrado">No se han encontrado registros. :( </p>');
+                    $('#listaProductos').html('<p class="productoNoEncontrado">No se han encontrado registros.</p>');
                 }else{
                     
                     $('#listaProductos').html(response);
