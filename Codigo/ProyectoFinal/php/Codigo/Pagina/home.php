@@ -42,7 +42,7 @@ session_start();
         <?php include 'CarouselEjes.php'; ?>
         <?php include 'CarouselSkates.php'; ?>
         <?php include 'CarouselRuedas.php'; ?>
-        
+        <?php include 'CarouselMoviles.php'; ?>
       </div>
     </div>
 
