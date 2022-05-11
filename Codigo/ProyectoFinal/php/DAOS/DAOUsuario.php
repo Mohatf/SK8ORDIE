@@ -120,7 +120,7 @@ function updatePassword($conexion,$idUsuario, $password){
 }
 
 function editarUsuario($conexion,$idUsuario, $usuario){
-    $consulta = "UPDATE usuarios SET Usuario = '$usuario' WHERE (`idu` = '$idUsuario');";
+    $consulta = "UPDATE usuarios SET Usuario = '$usuario' WHERE (`idUsuarios` = '$idUsuario');";
     $resultado = mysqli_query($conexion,$consulta);
     return $resultado;
 }
