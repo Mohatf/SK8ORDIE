@@ -1,5 +1,5 @@
 <div class="d-none d-sm-none d-md-block col-md-6">
-<h1 class="tituloHome text-center">SKATESBOARDS / LONGBOARDS</h1>
+<h1 class="tituloHome text-center">SKATES / LONGBOARDS</h1>
     <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:100%; height: 440px;">
     <div class="carousel-inner">
         <?php
