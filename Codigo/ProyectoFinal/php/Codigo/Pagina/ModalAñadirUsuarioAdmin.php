@@ -9,7 +9,7 @@
             </button>
             </div>
             <div class="modal-body px-4 py-4">
-            <form action="AñadirUsuarioAdmin.php" method="POST" id="formularioAñadirUsuarioAdmin" enctype="multipart/form-data">
+            <form id="formularioAñadirUsuarioAdmin" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="col-md-6 form-group">
                             <input class="form-control" type="text" placeholder="Usuario" name="usuario" id="usuario">
@@ -78,8 +78,7 @@
                         </p> 
         
                 <div class="modal-footer">
-                    <!-- <button class="botonEnviar btn btn-success" name="botonEnviar">Añadir</button> -->
-                    <input type="submit" class="botonEnviar btn btn-success" value="Enviar">
+                    <button class="botonEnviar btn btn-success" name="botonEnviar">Añadir</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     
             </form>

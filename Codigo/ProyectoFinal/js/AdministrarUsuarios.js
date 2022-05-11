@@ -163,30 +163,30 @@ $(document).ready(function(){
                 })
             })
 
-            // $('button[name=botonEnviar]').click(function(e){
+            $('button[name=botonEnviar]').click(function(e){
        
-            //     const postData={
-            //        usuario: $('#usuario').val(),
-            //        nombre: $('#nombre').val(),
-            //        primerapellido: $('#primerapellido').val(),
-            //        segundoapellido: $('#segundoapellido').val(),
-            //        dni: $('#dni').val(),
-            //        telefono: $('#telefono').val(),
-            //        password: $('#password').val(),
-            //        email: $('#email').val()
-            //     }
-            //     // MEDIANTE AJAX (POST) ENVIAMOS AL CARRITO EL ANTERIOR OBJETO
-            //     $.post('AñadirUsuarioAdmin.php', postData, function(response){
-            //         mostrarUsuarios();
-            //         $('#modalAñadirUsuarioAdmin').modal('hide');
+                const postData={
+                   usuario: $('#usuario').val(),
+                   nombre: $('#nombre').val(),
+                   primerapellido: $('#primerapellido').val(),
+                   segundoapellido: $('#segundoapellido').val(),
+                   dni: $('#dni').val(),
+                   telefono: $('#telefono').val(),
+                   password: $('#password').val(),
+                   email: $('#email').val()
+                }
+                // MEDIANTE AJAX (POST) ENVIAMOS AL CARRITO EL ANTERIOR OBJETO
+                $.post('AñadirUsuarioAdmin.php', postData, function(response){
+                    mostrarUsuarios();
+                    $('#modalAñadirUsuarioAdmin').modal('hide');
                      
-            //     });
+                });
                
               
-            //     e.preventDefault();
+                e.preventDefault();
                 
                    
                 
-            // });
+            });
           
 });
