@@ -76,13 +76,9 @@ session_start();
               <?php
                 $buscarProductosRandom =  buscarProductosRandom($conexion);
                 $i = 0;
-                $enlace="";
+                $enlace="www.google.es";
                 while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
-                  if($productosRandom['NombreCategoria']== "Skateboards Completos"){
-                    $enlace="DetallesProductoSkateBoardsCompletos.php?id=".$productosRandom['idProductos'];
-                  }else{
-                    $enlace="www.google.es";
-                  }
+                  
               ?>
               <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
                   <span style="font-size:25px; display: flex; justify-content: center; background: #fff; border: none;  color:black"><?php echo $productosRandom['NombreProducto'] ?></span>
