@@ -42,7 +42,7 @@ if(mysqli_num_rows($existeUsuario)!=0){
     $idUsuarios = $ultimoId;
     
     crearCarrito($conexion, $idCarrito, $idUsuarios);
-    
+    header("Location: AdministracionUsuarios.php");
   
   }
 
