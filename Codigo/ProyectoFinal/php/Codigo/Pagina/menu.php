@@ -37,7 +37,7 @@
                     <a href="../Pagina/CatalogoAccesorios.php" class="btn-noList">Accesorios</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="btn-noList" >Sobre nosotros</a>
+                    <a href="../Pagina/SobreNosotros.php" class="btn-noList" >Sobre nosotros</a>
                 </li>
                     <li class="menu-item iconoAcceder">
                     <?php if($_SESSION['usuarioConectado']==true){ ?> 
