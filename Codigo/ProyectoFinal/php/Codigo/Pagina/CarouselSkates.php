@@ -1,5 +1,5 @@
 <div class="d-none d-sm-none d-md-block col-md-6">
-    <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel" style="width:100%; height: 440px;">
     <div class="carousel-inner">
         <?php
         $buscarProductosRandom =  buscarProductosRandom($conexion);
@@ -9,9 +9,9 @@
             $enlace="DetallesProductoSkateBoardsCompletos.php?id=".$productosRandom['idProductos'];
         ?>
         <div class="carousel-item <?php echo ($i == 0) ? 'active' : '';?>">
-            <span style="font-size:25px; display: flex; justify-content: center; background: #fff; border: none;  color:black"><?php echo $productosRandom['NombreProducto'] ?></span>
-            <span style="display: flex; justify-content: center; background: #fff; border: none;">
-            <a href="<?php echo $enlace; ?>"> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>"></a>
+
+          <span style="display: flex; justify-content: center; background: #fff; border: none;">
+            <a href="<?php echo $enlace; ?>"> <img src="data:image/jpeg;base64,<?php echo base64_encode($productosRandom['Imagen']);?>" style="width:100%; height: 100%;" ></a>
             </span>
         </div>
         <?php
