@@ -216,6 +216,13 @@ function pagoFinalListaProductosCarrito($conexion){
     return $resultado;
 }
 
+function eliminarCarrito($conexion, $idCarrito){
+
+    $consulta = "DELETE FROM carrito where idCarrito='$idCarrito'";
+    $resultado = mysqli_query($conexion, $consulta);
+    return $resultado;
+}
+
 
 
 
