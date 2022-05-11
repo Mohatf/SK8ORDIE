@@ -178,7 +178,17 @@ $(document).ready(function(){
                 // MEDIANTE AJAX (POST) ENVIAMOS AL CARRITO EL ANTERIOR OBJETO
                 $.post('AñadirUsuarioAdmin.php', postData, function(response){
                     mostrarUsuarios();
-                    $('#modalAñadirUsuarioAdmin').modal('hide');
+                    if(response=="UsuarioExistente"){
+                        swal("SK8 OR DIE", "El usuario que ha introducido ya existe.", "error");
+                    }else if(response=="DniExistente"){
+                        swal("SK8 OR DIE", "El DNI que ha introducido ya existe.", "error");
+                    }else if(response=="EmailExistente"){
+                        swal("SK8 OR DIE", "El Email que ha introducido ya existe.", "error");
+                    }else{
+
+                        $('#modalAñadirUsuarioAdmin').modal('hide');
+                        swal("SK8 OR DIE", "¡El usuario se ha añadido correctamente!", "success");
+                    }
                      
                 });
                

@@ -25,13 +25,13 @@ $existeEmail = comprobarEmail($conexion, $email);
 
 
 if(mysqli_num_rows($existeUsuario)!=0){
- 
+ echo "UsuarioExistente";
 } else if(mysqli_num_rows($existeDni)!=0){
 
-
+  echo "DniExistente";
 } else if(mysqli_num_rows($existeEmail)!=0){
     
-   
+  echo "EmailExistente";
 } else {
   
   registroSinFoto($conexion, $nombre, $usuario, $password, $primerapellido, $segundoapellido, $dni, $email, $telefono);
@@ -42,7 +42,6 @@ if(mysqli_num_rows($existeUsuario)!=0){
     $idUsuarios = $ultimoId;
     
     crearCarrito($conexion, $idCarrito, $idUsuarios);
-    header("Location: AdministracionUsuarios.php");
   
   }
 
