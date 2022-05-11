@@ -47,7 +47,7 @@ if(mysqli_num_rows($existeUsuario)!=0){
     
     crearCarrito($conexion, $idCarrito, $idUsuarios);
     
-    header ("Location: ../Pagina/home.php");
+    header ("Location: login.php");
   
   }
 
