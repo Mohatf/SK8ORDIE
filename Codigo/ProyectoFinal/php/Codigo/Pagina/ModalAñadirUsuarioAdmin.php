@@ -78,7 +78,8 @@
                         </p> 
         
                 <div class="modal-footer">
-                    <button class="botonEnviar btn btn-success" name="botonEnviar">Añadir</button>
+                    <!-- <button class="botonEnviar btn btn-success" name="botonEnviar">Añadir</button> -->
+                    <input type="submit" class="botonEnviar btn btn-success" value="Enviar">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     
             </form>
