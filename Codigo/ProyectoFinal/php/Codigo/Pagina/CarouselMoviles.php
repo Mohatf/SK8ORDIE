@@ -1,8 +1,8 @@
 <div class="d-block d-sm-block d-md-none col-md-12">
-    <div id="carouselExampleControlsMovil" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls5" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <?php
-        $buscarProductosRandom =  buscarProductosRandomMovil($conexion);
+        $buscarProductosRandom =  buscarProductosRandom($conexion);
         $i = 0;
         $enlace="";
         while($productosRandom = mysqli_fetch_assoc($buscarProductosRandom)){
