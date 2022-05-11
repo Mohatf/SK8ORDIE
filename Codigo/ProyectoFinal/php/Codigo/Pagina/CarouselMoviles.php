@@ -1,5 +1,5 @@
 <div class="d-block d-sm-block d-md-none col-md-12">
-    <div id="carouselExampleControls1" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControlsMovil" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <?php
         $buscarProductosRandom =  buscarProductosRandomMovil($conexion);
@@ -21,11 +21,11 @@
     </div>
 
     <button style="background: #fff; border: none;" class="carousel-control-prev rounded" type="button" data-target="#carouselExampleControls1" data-slide="prev">
-        <span class="carousel-control-prev-iconMovil" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </button>
     <button style="background: #fff; border: none;" class="carousel-control-next rounded" type="button" data-target="#carouselExampleControls1" data-slide="next">
-        <span class="carousel-control-next-iconMovil" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </button>
     </div>
