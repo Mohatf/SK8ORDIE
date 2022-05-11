@@ -11,11 +11,6 @@ $dni = $_POST['dni'];
 $email = $_POST['email'];
 $telefono = $_POST['telefono'];
 $password = $_POST['password'];
-$fotoperfil=imagenDefault($conexion);
-$foto=mysqli_fetch_assoc($fotoperfil);
-//! EEEEE
-$imagenDef=$foto['imagenDefault'];
-
 $conexion=conectar(true);
 
 //Iniciamos la sesión
@@ -39,7 +34,7 @@ if(mysqli_num_rows($existeUsuario)!=0){
    
 } else {
   
-      registroSinFoto($conexion, $nombre, $usuario, $password, $primerapellido, $segundoapellido, $dni, $email, $telefono,$imagenDef);
+  registroSinFoto($conexion, $nombre, $usuario, $password, $primerapellido, $segundoapellido, $dni, $email, $telefono)
    
     $ultimoId = mysqli_insert_id($conexion);
 
