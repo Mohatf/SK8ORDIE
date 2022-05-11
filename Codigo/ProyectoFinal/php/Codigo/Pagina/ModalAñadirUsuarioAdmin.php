@@ -9,7 +9,7 @@
             </button>
             </div>
             <div class="modal-body px-4 py-4">
-            <form id="formularioAñadirUsuarioAdmin" enctype="multipart/form-data">
+            <form action="AñadirUsuarioAdmin.php" id="formularioAñadirUsuarioAdmin" enctype="multipart/form-data">
                     <div class="form-row">
                         <div class="col-md-6 form-group">
                             <input class="form-control" type="text" placeholder="Usuario" name="usuario" id="usuario">
