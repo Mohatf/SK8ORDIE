@@ -180,6 +180,11 @@ function buscarProductosRandom($conexion){
     $resultado= mysqli_query($conexion,$consulta);
     return $resultado;
 }
+function buscarProductosRandomMovil($conexion){
+    $consulta = "SELECT DISTINCT * FROM productos order by rand() Limit 6;";
+    $resultado= mysqli_query($conexion,$consulta);
+    return $resultado;
+}
 function buscarProductosRandomEjes($conexion){
     $consulta = "SELECT DISTINCT * FROM productos 
     where idCategoriaFK='3' 
