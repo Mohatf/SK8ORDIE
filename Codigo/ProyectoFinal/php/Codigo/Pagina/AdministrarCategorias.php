@@ -36,7 +36,7 @@ session_start();
     <section class="section-adminUsers">
         <div class="container">
             <div class="row mb-4 ">
-                <h1 class="titleAdminUser">LISTA DE CATEGORÍAS <i class="fa-solid fa-list"></i></h1>
+                <h1 class="titleAdminUser">LISTADO DE CATEGORÍAS <i class="fa fa-list"></i></h1>
             </div>
             <div class="row mb-2">
                 <div class="form-group col-md-3">
@@ -71,7 +71,7 @@ session_start();
                 </div>
             </div>
             <div class="row">
-                <div class="table-responsive rounded col-md-12">
+                <div class="table-responsive rounded col-md-12 text-center">
                     <table class="table" id="tabla">
                         <thead class="bg-light text-center">
                             <tr>
