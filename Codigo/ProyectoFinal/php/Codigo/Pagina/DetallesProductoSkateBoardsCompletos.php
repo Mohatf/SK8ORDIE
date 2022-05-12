@@ -44,7 +44,13 @@ $producto=mysqli_fetch_assoc(listarProductoId($conexion, $idProducto));
                     <h4 style="margin-left: 10px;"><b>Stock: </b><?php echo $producto['Stock'];?> ud.</h4>
                     <h4 style="margin-left: 10px;"><b>Categoría: </b><?php echo $producto['NombreCategoria'];?></h4><br>
                     <div style="margin-left: 10px;">
-                    <div><a href="#" data-stock="<?php echo $producto['Stock'];?>" data-precio="<?php echo $producto['Precio'];?>" data-id="<?php echo $producto['idProductos'];?>" id="btnAñadirProducto" name="btnAñadirProducto" class="col-md-6 btn btn-addCar btn-success  btnAñadirProducto">Añadir <i class="fas fa-cart-plus"></i></a></div>
+                    <?php if($_SESSION['usuarioConectado']==true){ ?>
+                      
+                        <div><a href="#" data-stock="<?php echo $producto['Stock'];?>" data-precio="<?php echo $producto['Precio'];?>" data-id="<?php echo $producto['idProductos'];?>" id="btnAñadirProducto" name="btnAñadirProducto" class="col-md-6 btn btn-addCar btn-success  btnAñadirProducto">Añadir <i class="fas fa-cart-plus"></i></a></div>
+                    <?php } ?>
+                    <?php if($_SESSION['usuarioConectado']==false){ ?>
+                        <div><a href="#" id="btnAñadirProductoSinSesion" name="btnAñadirProductoSinSesion" class="col-md-6 btn btn-addCar btn-success  btnAñadirProducto">Añadir <i class="fas fa-cart-plus"></i></a></div>
+                    <?php } ?>
                     <div class="d-block d-sm-block d-md-none"><br></div>
                     </div>
                          
