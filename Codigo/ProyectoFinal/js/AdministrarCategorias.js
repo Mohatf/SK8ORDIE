@@ -12,9 +12,7 @@ $(document).ready(function(){
                     <tr>
                         <td>${categoria.id}</td>
                         <td>${categoria.nombreCategoria}</td>
-                        <td>
-                            <button class="btn btn-primary btnEditarCategoria col-md-12"  data-id='${categoria.id}'><i class="fas fa-pen"></i></button> 
-                        </td>
+                        
                     </tr>
                 `  
             });
@@ -23,55 +21,7 @@ $(document).ready(function(){
             }
         })
     }
-    $(document).on('click','.btnEditarCategoria', function(){
-        let idCategoria= $(this).attr('data-id');
-        mostrarAlertModificarNombreCategoria(idCategoria);
-        
-    });
-
-    function mostrarAlertModificarNombreCategoria(idCategoria){
-        swal("Editar nombre de la categoría", {
-            // ESPECIFICAMOS QUE CONTENIDO QUEREMOS QUE TENGA
-            content: {
-                element: "input",
-                attributes: {
-                name: "categoriaModificar",
-                placeholder: "Escribe un nuevo nombre para la categoría ...",
-                
-                
-                },
-            },
-            //BOTONES
-            buttons: {
-                catch: {
-                    text: "Confirmar",
-                    value: "aceptar",
-                    },
-                cancel: "Cancelar",
-            
-            },
-
-        })
-        .then((value) => {
-            switch (value) {
-                // SI RECIBE EL VALOR aceptar QUE EJECUTE LA SIGUIENTE FUNCION POST  
-            case "aceptar":
-                $.post('EditarNombreCategoriaAdmin.php', {'categoria':`${$('input[name=categoriaModificar]').val()}`, 'idCategoria':`${idCategoria}`}, function(response){
-                    mostrarCategorias();
-                    if(response=="Campo nulo"){
-                        swal("SK8 OR DIE", "Escribe un nombre de categoría.", "error");
-                    }else if(response=="Error"){
-                        swal("SK8 OR DIE", "Ya hay una categoría con ese nombre.", "error");
-                    }else{
-                        swal("SK8 OR DIE", "¡El nombre de la categoría se ha actualizado correctamente!", "success");
-                    }
-                });
-                
-                break;
-                
-            }
-        });
-    }
+  
 
 
 
@@ -94,9 +44,7 @@ $(document).ready(function(){
                             <tr>
                                 <td>${categoria.id}</td>
                                 <td>${categoria.nombreCategoria}</td>
-                                <td>
-                                    <button class="btn btn-primary btnEditarCategoria col-md-12"  data-id='${categoria.id}'><i class="fas fa-pen"></i></button> 
-                                </td>
+                                
                             </tr>
                         `  
                     });
@@ -122,9 +70,6 @@ $(document).ready(function(){
                         <tr>
                             <td>${categoria.id}</td>
                             <td>${categoria.nombreCategoria}</td>
-                            <td>
-                                <button class="btn btn-primary btnEditarCategoria col-md-12"  data-id='${categoria.id}'><i class="fas fa-pen"></i></button> 
-                            </td>
                         </tr>
                     `  
                 });

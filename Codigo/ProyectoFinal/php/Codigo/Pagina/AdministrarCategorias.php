@@ -36,7 +36,7 @@ session_start();
     <section class="section-adminUsers">
         <div class="container">
             <div class="row mb-4 ">
-                <h1 class="titleAdminUser">ADMINISTRACIÓN DE CATEGORÍAS <i class="fas fa-cogs"></i></h1>
+                <h1 class="titleAdminUser">LISTA DE CATEGORÍAS <i class="fa-solid fa-list"></i></h1>
             </div>
             <div class="row mb-2">
                 <div class="form-group col-md-3">
@@ -77,7 +77,6 @@ session_start();
                             <tr>
                             <th scope="col">ID</th>
                             <th scope="col">CATEGORÍA</th>
-                            <th scope="col">ACCIONES</th>
                             </tr>
                         </thead>
                         
