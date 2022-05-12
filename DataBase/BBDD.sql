@@ -122,7 +122,6 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `Usuario_UNIQUE` (`Usuario`),
   UNIQUE KEY `Dni_UNIQUE` (`Dni`),
   UNIQUE KEY `Email_UNIQUE` (`Email`),
-  UNIQUE KEY `Telefono_UNIQUE` (`Telefono`)
 ) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

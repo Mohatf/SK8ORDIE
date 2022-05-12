@@ -1,5 +1,4 @@
 <?php
-
 function listarCategorias($conexion){
 
     $consulta = "SELECT * FROM categoria";
@@ -23,19 +22,6 @@ function filtrarCategoria($conexion, $categoria){
     return $resultado;
 }
 
-function validarCategoria($conexion, $categoria){
-
-    $consulta = "SELECT * FROM categoria where NombreCategoria = '$categoria'";
-
-    $resultado = mysqli_query($conexion, $consulta);
-    return $resultado;
-}
-
-function editarCategoria($conexion,$idCategoria, $categoria){
-    $consulta = "UPDATE categoria SET NombreCategoria = '$categoria' WHERE (`idCategoria` = '$idCategoria');";
-    $resultado = mysqli_query($conexion,$consulta);
-    return $resultado;
-}
 
 
 ?>

@@ -234,13 +234,6 @@ function filtrarUsuario($conexion, $categoria){
     return $resultado;
 }
 
-function imagenDefault($conexion){
-
-    $consulta = "SELECT * FROM ImagenDefault WHERE idImagenDefault='1'";
-    $resultado = mysqli_query($conexion, $consulta);
-    return $resultado;
-}
-//! MMMMM ¿?
 function comprobarPrecioTotalCarrito($conexion){
 
     $consulta = "SELECT * FROM carrito";
