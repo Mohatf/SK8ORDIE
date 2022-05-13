@@ -39,7 +39,7 @@ session_start();
             <div class="form-group col-md-4">
                     <div class="input-group ">
                             <select class="custom-select" id="filtroPrecio">
-                                <option selected>Todos</option>
+                                <option value="10000000000">Todos</option>
                                 <option value="5">0-5€</option>
                                 <option value="10">0-10€</option>
                                 <option value="50">0-50€</option>
