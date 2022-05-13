@@ -64,6 +64,8 @@ que se venden.
 
 7-. Control de errores mediante JavaScript.
 
+8-. Carrito de compras.
+
 # ANÁLISIS Y DISEÑO WEB
 
 El mapa web constará de las siguientes opciones:
@@ -95,7 +97,7 @@ y productos.
 
 Algo gráfico más o menos seria lo siguiente:
 
-![MapaWeb](Imagenes/MapaWeb.png)
+![MapaWeb](../Imagenes/MapaWeb.png)
 
 ## Prototipo web y boceto de la estructura
 
@@ -103,33 +105,33 @@ Algo gráfico más o menos seria lo siguiente:
 observar esta parte, encima se inserta una imagen de bienvenida y al hacer scroll que
 aparezca esta parte.
 
-![BocetoInicio](Imagenes/BocetoInicio.png)
+![BocetoInicio](../Imagenes/BocetoInicio.png)
 
 - Skates: Esta disposición es la que se usará para todos las secciones del catálogo y
 accesorios. A lo mejor se añade un filtro de precio por algún lado pero esta seria la estructura.
 
-![BocetoCatalogos](Imagenes/BocetoCatalogos.png)
+![BocetoCatalogos](../Imagenes/BocetoCatalogos.png)
 
 - Detalles de los productos: Esta disposición es la que se usará para todas las secciones de los detalles.
 
-![BocetoDetalles](Imagenes/BocetoDetallesProducto.png)
+![BocetoDetalles](../Imagenes/BocetoDetallesProducto.png)
 
 - Administración: Esta disposición se utilizará para todas las secciones de
 administración, es decir, administración de usuarios y productos.
 
-![BocetoAdministracion](Imagenes/BocetoAdministracion.png)
+![BocetoAdministracion](../Imagenes/BocetoAdministracion.png)
 
 - Perfil: Esta sería más o menos la disposición del perfil.
 
-![BocetoPerfil](Imagenes/BocetoPerfil.png)
+![BocetoPerfil](../Imagenes/BocetoPerfil.png)
 
 - SobreNosotros: Esta sería la disposición, algo simple y minimalista.
 
-![BocetoSobreNosotros](Imagenes/BocetoSobreNosotros.png)
+![BocetoSobreNosotros](../Imagenes/BocetoSobreNosotros.png)
 
 - Mapa del sitio : Esta sería la disposición del mapa del sitio.
 
-![BocetoMapaDelSitio](Imagenes/BocetoMapaDelSitio.png)
+![BocetoMapaDelSitio](../Imagenes/BocetoMapaDelSitio.png)
 
 ## Guía de estilos
 
@@ -140,16 +142,16 @@ llegó a la conclusión de que estos eran los que quedaban mejor y que además l
 un toque más profesional al sitio web.
 
 #LOGO:
- ![Logo](Imagenes/LogoSK8ORDIE.png)
+ ![Logo](../Imagenes/LogoSK8ORDIE.png)
 
 Este finalmente será el logo de la empresa, es simplemente un logo diseñado con el
 nombre de la empresa.
 
 ## Planificación de tareas
 
-![TablaPlanificacionTareas](Imagenes/TablaPlanificacionDeTareas.png)
+![TablaPlanificacionTareas](../Imagenes/TablaPlanificacionDeTareas.png)
 
-![DiagramaGrantPlanTareas](Imagenes/DiagramaGrantPlanTareas.png)
+![DiagramaGrantPlanTareas](../Imagenes/DiagramaGrantPlanTareas.png)
 
 IMPORTANTE! Esto es solo una previsión no quiere decir que lo haga al pie de la letra
 como en el diagrama.
@@ -157,10 +159,10 @@ como en el diagrama.
 ## Base de datos
 ### Diseño Entidad Relación de la BBDD
 
-![ModeloEntidadRelacion](Imagenes/ModeloEntidadRelacionpng.png)
+![ModeloEntidadRelacion](../Imagenes/ModeloEntidadRelacionpng.png)
 ### Modelo relacional BBDD
 
-![ModeloRelacional](Imagenes/ModeloRelacional.png)
+![ModeloRelacional](../Imagenes/ModeloRelacional.png)
 ### Script de creación BBDD
 
 Para la creación de la tabla de usuarios se ha usado el siguiente script, esta tabla es la
@@ -940,7 +942,7 @@ Finalmente, si le damos a logout en el muñeco del menu, nos enviará a la pági
 
 ## Jerarquía de directorios
 
-![ArbolDirectorios](Imagenes/ArbolDirectorios.png)
+![ArbolDirectorios](../Imagenes/ArbolDirectorios.png)
 
 ### Contenido directorios
 
@@ -950,7 +952,7 @@ Finalmente, si le damos a logout en el muñeco del menu, nos enviará a la pági
 > 
 > `imagenes` -> Contiene las imágenes necesarias para ciertas partes de la web, como por ejemplo el logo del menú.
 > 
-> `imagenes/Productos` -> Esta carpeta que a la vez contiene subdirectorios contiene imagenes de ejemplo para la venta de productos.
+> `/imagenes/Productos` -> Esta carpeta que a la vez contiene subdirectorios contiene imagenes de ejemplo para la venta de productos.
 > `js` -> Contiene los script de JavaScript necesarios para la página.
 > `php/Codigo` -> Esta carpeta contiene los archivos php de la web, dentro contiene dos carpetas uno para los archivos de login y registro y el otro directorio para el resto de la página. En la carpeta Login, se encuentra otra dentro que es PHPMailer, esta es necesaria por el uso de esta librería en la recuperación de contraseña.
 > `DAOS` -> En esta carpeta se encuentra los archvios php que contienen la conexion a la BBDD y las consultas a mysql necesarias.
@@ -973,11 +975,11 @@ Finalmente, si le damos a logout en el muñeco del menu, nos enviará a la pági
 
 Esta es la estructura de la interface con footer.
 
-![EstructuraInterface](Imagenes/EstructuraInterface.png)
+![EstructuraInterface](../Imagenes/EstructuraInterface.png)
 
 Esta es la estructura de la interface sin footer.
 
-![EstructuraInterfaceSinFooter](Imagenes/EstructuraInterfaceSinFooter.png)
+![EstructuraInterfaceSinFooter](../Imagenes/EstructuraInterfaceSinFooter.png)
 
 # IMPLEMENTACIÓN
 
@@ -1317,7 +1319,35 @@ function validarUsuario(){
     }
 }
 ```
+## REQUISITO 8: Carrito de Compras.
 
+Para cumplir con este requisito usaremos consultas mysql de insert y update si ya existen además de delete si no queremos un producto o vaciar el carrito.
+
+### Ejemplo de codigo:
+
+**Algunas consultas del carrito**
+
+```
+function addProductosAlCarrito($conexion,$cantidad, $precio, $idCarrito, $idProducto){
+    $consulta = "INSERT INTO `tiendaskate`.`productoscarrito` (`Cantidad`, `PrecioProducto`, `idCarrito_TC`, `idProductos_TP`) VALUES ('$cantidad', '$precio', '$idCarrito', '$idProducto');";
+    $resultado= mysqli_query($conexion,$consulta);
+    return $resultado;
+}
+
+function sumarCantidadProductosCarrito($conexion,$idCarrito){
+
+    $consulta = "SELECT SUM(Cantidad)FROM tiendaskate.productoscarrito where idCarrito_TC='$idCarrito' ";
+    $resultado = mysqli_query($conexion, $consulta);
+    return $resultado;
+}
+
+function eliminarProductoCarrito($conexion,$idProducto){
+
+    $consulta = "DELETE FROM productoscarrito where idProductosCarrito='$idProducto'";
+    $resultado = mysqli_query($conexion, $consulta);
+    return $resultado;
+}
+```
 
 # PRUEBAS
 
@@ -1386,83 +1416,83 @@ Se muestran diferentes pantallas que constituyen el desarrollo final de la aplic
 
 ## Página de Inicio
 
-![PaginaInicio](Imagenes/PaginaInicio1.png)
+![PaginaInicio](../Imagenes/PaginaInicio1.png)
 
 ## Página de Inicio 2
 
-![PaginaInicio2](Imagenes/PaginaInicio2.png)
+![PaginaInicio2](../Imagenes/PaginaInicio2.png)
 
 ## Footer
 
-![Footer](Imagenes/Footer.png)
+![Footer](../Imagenes/Footer.png)
 
 ## Cálogo
 
-![Catalogo](Imagenes/Catalogo.png)
+![Catalogo](../Imagenes/Catalogo.png)
 
 ## Cálogo Mejor Perspectiva
 
-![MejorPerspectivaCatalogo](Imagenes/MejorPerspectivaCatalogo.png)
+![MejorPerspectivaCatalogo](../Imagenes/MejorPerspectivaCatalogo.png)
 
 ## Sobre Nosotros
 
-![SobreNosotros](Imagenes/SobreNosotros.png)
+![SobreNosotros](../Imagenes/SobreNosotros.png)
 
 ## Sobre Nosotros
 
-![Login](Imagenes/Login.png)
+![Login](../Imagenes/Login.png)
 
 ## Registro
 
-![Registro](Imagenes/Registro.png)
+![Registro](../Imagenes/Registro.png)
 
 ## Recuperar Contraseña
 
-![RecuperarCont](Imagenes/RecuperarCont.png)
+![RecuperarCont](../Imagenes/RecuperarCont.png)
 
 ## Perfil
 
-![Perfil](Imagenes/Perfil.png)
+![Perfil](../Imagenes/Perfil.png)
 
 ## Administración
 
-![Administracion](Imagenes/Administracion.png)
+![Administracion](../Imagenes/Administracion.png)
 
 ## Administración de Usuarios
 
-![AdministracionUsuarios](Imagenes/AdministracionUsuarios.png)
+![AdministracionUsuarios](../Imagenes/AdministracionUsuarios.png)
 
 ## Editar Usuarios
 
-![EditarUsuarios](Imagenes/EdicionUsuarios.png)
+![EditarUsuarios](../Imagenes/EdicionUsuarios.png)
 
 ## Administración de Productos
 
-![AdministracionProductos](Imagenes/AdministracionProductos.png)
+![AdministracionProductos](../Imagenes/AdministracionProductos.png)
 
 ## Editar Productos
 
-![EditarProductos](Imagenes/EdicionProductos.png)
+![EditarProductos](../Imagenes/EdicionProductos.png)
 
 ## Listado de Categorías
 
-![ListadoCategorias](Imagenes/ListadoDeCategorias.png)
+![ListadoCategorias](../Imagenes/ListadoDeCategorias.png)
 
 ## Carrito sin nada
 
-![CarritoSinNada](Imagenes/CarritoSinNada.png)
+![CarritoSinNada](../Imagenes/CarritoSinNada.png)
 
 ## Carrito con Productos
 
-![CarritoProductos](Imagenes/CarritoConProductos.png)
+![CarritoProductos](../Imagenes/CarritoConProductos.png)
 
 ## Pago Finalizado
 
-![PagoFinalizado](Imagenes/PagoFinalizado.png)
+![PagoFinalizado](../Imagenes/PagoFinalizado.png)
 
 ## Mapa del Sitio
 
-![ MapaDelSitio](Imagenes/MapaDelSitio.png)
+![ MapaDelSitio](../Imagenes/MapaDelSitio.png)
 
 # BIBLIOGRAFÍA
 
